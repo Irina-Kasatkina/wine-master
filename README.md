@@ -13,7 +13,7 @@ Then use `pip` (or `pip3`, there is a conflict with Python2) to install the depe
 pip install -r requirements.txt
 ```
 
-## How to start
+### How to start
 
 - Run cmd, then on the command line change to the program directory: 
 ```
@@ -22,7 +22,13 @@ cd <program_directory_on_your_local_disk>
 - Then start the site with `python main.py` or `python3 main.py`
 - Go to the website at [http://127.0.0.1:8000](http://127.0.0.1:8000).
 
-## Project Goals
+### Sample data
+
+If you want to change the data on the site, take the /data/wine3.xlsx file as a sample and fill it with your data (do not change the column headers).
+
+Images for wines are in the /images folder. The rest of the images are in the /assets folder.
+
+### Project Goals
 
 The code was written for educational purposes in the process of learning in an online course on web layout for Python developers.
 
@@ -42,7 +48,7 @@ The code was written for educational purposes in the process of learning in an o
 pip install -r requirements.txt
 ```
 
-## Как запустить
+### Как запустить
 
 - Запустите cmd, в командной строке перейдите в каталог программы: 
 ```
@@ -51,6 +57,12 @@ cd <каталог_программы_на_вашем_локальном_дис�
 - Затем запустите сайт командой `python main.py` или `python3 main.py`
 - Перейдите на сайт по адресу [http://127.0.0.1:8000](http://127.0.0.1:8000).
 
-## Цель проекта
+### Образец данных
+
+Если вы хотите поменять данные на сайте, скопируйте как образец файл /data/wine3.xlsx и заполните его своими данными (не меняйте заголовки столбцов).
+
+Картинки для вин лежат в папке /images. Остальные картинки - в папке /assets.
+
+### Цель проекта
 
 Код написан в учебных целях в процессе обучения на онлайн-курсе по вёрстке для Python-разработчиков.
