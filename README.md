@@ -19,18 +19,26 @@ pip install -r requirements.txt
 ```
 cd <program_directory_on_your_local_disk>
 ```
-- Then start the site with `python main.py` or `python3 main.py`
+- Then start the site with 
+```
+python main.py
+```
+or
+```
+python3 main.py
+```
 - Go to the website at [http://127.0.0.1:8000](http://127.0.0.1:8000).
 
 ### Sample data
 
-If you want to change the data on the site, take the /data/wine3.xlsx file as a sample and fill it with your data (do not change the column headers).
+If you want to change the data on the site, take the `/data/wine3.xlsx` file as a sample and fill it with your data (do not change the column headers).
 
-Images for wines are in the /images folder. The rest of the images are in the /assets folder.
+Images for wines are in the `/images` folder. The rest of the images are in the `/assets` folder.
 
 ### Project Goals
 
 The code was written for educational purposes in the process of learning in an online course on web layout for Python developers.
+
 
 
 # Вёрстка для питониста - Продаём элитное вино
@@ -54,14 +62,22 @@ pip install -r requirements.txt
 ```
 cd <каталог_программы_на_вашем_локальном_диске>
 ```
-- Затем запустите сайт командой `python main.py` или `python3 main.py`
+- Затем запустите сайт командой 
+```
+python main.py
+```
+или
+```
+python3 main.py
+```
+
 - Перейдите на сайт по адресу [http://127.0.0.1:8000](http://127.0.0.1:8000).
 
 ### Образец данных
 
-Если вы хотите поменять данные на сайте, скопируйте как образец файл /data/wine3.xlsx и заполните его своими данными (не меняйте заголовки столбцов).
+Если вы хотите поменять данные на сайте, скопируйте как образец файл `/data/wine3.xlsx` и заполните его своими данными (не меняйте заголовки столбцов).
 
-Картинки для вин лежат в папке /images. Остальные картинки - в папке /assets.
+Картинки для вин лежат в папке `/images`. Остальные картинки - в папке `/assets`.
 
 ### Цель проекта
 
