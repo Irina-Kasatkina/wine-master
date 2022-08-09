@@ -29,11 +29,20 @@ python3 main.py
 ```
 - Go to the website at [http://127.0.0.1:8000](http://127.0.0.1:8000).
 
-### Sample data
+### How to change the data on the website
 
-If you want to change the data on the site, take the `/data/wine3.xlsx` file as a sample and fill it with your data (do not change the column headers).
+If you want to change the data on the html page, copy the `data/wine3.xlsx` file as a sample and fill it with your data (do not change the column headings).
 
-Images for wines are in the `/images` folder. The rest of the images are in the `/assets` folder.
+You can also set a different path to the file with your data.
+This can be done using the `-f` option on the command line (example file path: `data1/wine4.xlsx`):
+```
+python main.py -f path_to_your_data_file
+```
+or you can set the path to your file in the configuration file (see the example in `config/config.ini`).
+If you wish, you can change the path to the configuration file. Then specify it in the `-c` command line option (example of the file path: `config1/config2.ini`):
+```
+python main.py -c path_to_your_config_file
+```
 
 ### Project Goals
 
@@ -66,18 +75,22 @@ cd <каталог_программы_на_вашем_локальном_дис�
 ```
 python main.py
 ```
-или
-```
-python3 main.py
-```
-
 - Перейдите на сайт по адресу [http://127.0.0.1:8000](http://127.0.0.1:8000).
 
-### Образец данных
+### Как поменять данные на сайте
 
-Если вы хотите поменять данные на сайте, скопируйте как образец файл `/data/wine3.xlsx` и заполните его своими данными (не меняйте заголовки столбцов).
+Если вы хотите поменять данные на html-странице, скопируйте как образец файл `data/wine3.xlsx` и заполните его своими данными (не меняйте заголовки столбцов).
 
-Картинки для вин лежат в папке `/images`. Остальные картинки - в папке `/assets`.
+Вы также можете задать другой путь к файлу со своими данными.
+Это можно сделать с помощью параметра `-f` в командной строке (пример пути к файлу: `data1/wine4.xlsx`):
+```
+python main.py -f путь_к_вашему_файлу_с_данными
+```
+либо можно задать путь к вашему файлу в конфигурационном файле (см. образец в `config/config.ini`).
+При желании вы также можете поменять путь к конфигурационному файлу. Тогда задайте его в параметре `-c` командной строки (пример пути к файлу: `config1/config2.ini`):
+```
+python main.py -c путь_к_вашему_конфигурационному_файлу
+```
 
 ### Цель проекта
 
