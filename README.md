@@ -31,18 +31,28 @@ python3 main.py
 
 ### How to change the data on the website
 
-If you want to change the data on the html page, copy the `data/wine3.xlsx` file as a sample and fill it with your data (do not change the column headings).
+If you want to change the wines data on the html page, copy the `data/wine3.xlsx` file as a sample and fill it with your data (do not change the column headings). If you want to change the advertising actions data, copy the `data/actions.xlsx` file as a sample and fill it with your data (do not change the column headings). After that, as before, run the site with the command
+```
+python main.py
+```
 
-You can also set a different path to the file with your data.
-This can be done using the `-f` option on the command line (example file path: `data1/wine4.xlsx`):
+In addition, the main.py program can accept command-line options to set paths to files with information about wines and advertising actions:
+-w filename - to set the path to the wines data file,
+-a filename - to set the path to a file with advertising actions data.
+
+For example, for the files `data1/wines1.xlsx` and `data2/actions2.xlsx`, the site is runned with the command:
 ```
-python main.py -f path_to_your_data_file
+python main.py -w data1/wines1.xlsx -a data2/actions2.xlsx
 ```
-or you can set the path to your file in the configuration file (see the example in `config/config.ini`).
-If you wish, you can change the path to the configuration file. Then specify it in the `-c` command line option (example of the file path: `config1/config2.ini`):
+
+It is also possible not to specify the paths on the command line, but to set them in the configuration file (see the sample in `config/config.ini`).
+If you change the path to the configuration file, then use the -c option to set the path to it. For example, for the configuration file `config1/config1.ini`
+run the site with the command
 ```
-python main.py -c path_to_your_config_file
+python main.py -c config1/config1.ini
 ```
+
+Wines images are in the `images` folder, and images for advertising actions are in the `assets` folder.
 
 ### Project Goals
 
@@ -79,18 +89,28 @@ python main.py
 
 ### Как поменять данные на сайте
 
-Если вы хотите поменять данные на html-странице, скопируйте как образец файл `data/wine3.xlsx` и заполните его своими данными (не меняйте заголовки столбцов).
+Если вы хотите поменять на html-странице данные о винах, скопируйте как образец файл `data/wine3.xlsx` и заполните его своими данными (не меняйте заголовки столбцов). Если вы хотите поменять данные о рекламных акциях, скопируйте как образец файл `data/actions.xlsx` и заполните его своими данными (не меняйте заголовки столбцов). После этого, как и прежде, запустите сайт командой
+```
+python main.py
+```
 
-Вы также можете задать другой путь к файлу со своими данными.
-Это можно сделать с помощью параметра `-f` в командной строке (пример пути к файлу: `data1/wine4.xlsx`):
+Кроме этого, программа main.py может принимать параметры командной строки для задания путей к файлам с информацией о винах и рекламных акциях:
+-w имя_файла - для задания пути к файлу с информацией о винах,
+-a имя_файла - для задания пути к файлу с информацией о рекламных акциях.
+
+Например, для файлов `data1/wines1.xlsx` и `data2/actions2.xlsx` сайт запускается командой:
 ```
-python main.py -f путь_к_вашему_файлу_с_данными
+python main.py -w data1/wines1.xlsx -a data2/actions2.xlsx
 ```
-либо можно задать путь к вашему файлу в конфигурационном файле (см. образец в `config/config.ini`).
-При желании вы также можете поменять путь к конфигурационному файлу. Тогда задайте его в параметре `-c` командной строки (пример пути к файлу: `config1/config2.ini`):
+
+Также можно не указывать пути в командной строке, а задать их в конфигурационном файле (см. образец в `config/config.ini`).
+Если вы поменяете путь к конфигурационному файлу, то используйте параметр -c для задания пути к нему. Например, для конфигурационного файла `config1/config1.ini` 
+запустите сайт командой
 ```
-python main.py -c путь_к_вашему_конфигурационному_файлу
+python main.py -c config1/config1.ini
 ```
+
+Картинки для вин находятся в папке `images`, а картинки для рекламных акций - в папке `assets`.
 
 ### Цель проекта
 
