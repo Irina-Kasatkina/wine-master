@@ -36,9 +36,9 @@ If you want to change the wines data on the html page, copy the `data/wine3.xlsx
 python main.py
 ```
 
-In addition, the main.py program can accept command-line options to set paths to files with information about wines and advertising actions:
--w filename - to set the path to the wines data file,
--a filename - to set the path to a file with advertising actions data.
+In addition, the main.py program can accept command-line options to set paths to files with information about wines and advertising actions:<br>
+`-w filepath` - to set the path to the wines data file,<br>
+`-a filepath` - to set the path to a file with advertising actions data.
 
 For example, for the files `data1/wines1.xlsx` and `data2/actions2.xlsx`, the site is runned with the command:
 ```
@@ -94,9 +94,9 @@ python main.py
 python main.py
 ```
 
-Кроме этого, программа main.py может принимать параметры командной строки для задания путей к файлам с информацией о винах и рекламных акциях:
--w имя_файла - для задания пути к файлу с информацией о винах,
--a имя_файла - для задания пути к файлу с информацией о рекламных акциях.
+Кроме этого, программа main.py может принимать параметры командной строки для задания путей к файлам с информацией о винах и рекламных акциях:<br>
+`-w путь_к_файлу` - для задания пути к файлу с информацией о винах,<br>
+`-a путь_к_файлу` - для задания пути к файлу с информацией о рекламных акциях.
 
 Например, для файлов `data1/wines1.xlsx` и `data2/actions2.xlsx` сайт запускается командой:
 ```
