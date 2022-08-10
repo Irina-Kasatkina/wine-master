@@ -46,7 +46,7 @@ python main.py -w data1/wines1.xlsx -a data2/actions2.xlsx
 ```
 
 It is also possible not to specify the paths on the command line, but to set them in the configuration file (see the sample in `config/config.ini`).
-If you change the path to the configuration file, then use the -c option to set the path to it. For example, for the configuration file `config1/config1.ini`
+If you change the path to the configuration file, then use the `-c` option to set the path to it. For example, for the configuration file `config1/config1.ini`
 run the site with the command
 ```
 python main.py -c config1/config1.ini
@@ -104,7 +104,7 @@ python main.py -w data1/wines1.xlsx -a data2/actions2.xlsx
 ```
 
 Также можно не указывать пути в командной строке, а задать их в конфигурационном файле (см. образец в `config/config.ini`).
-Если вы поменяете путь к конфигурационному файлу, то используйте параметр -c для задания пути к нему. Например, для конфигурационного файла `config1/config1.ini` 
+Если вы поменяете путь к конфигурационному файлу, то используйте параметр `-c` для задания пути к нему. Например, для конфигурационного файла `config1/config1.ini` 
 запустите сайт командой
 ```
 python main.py -c config1/config1.ini
