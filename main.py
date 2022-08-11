@@ -1,7 +1,6 @@
 import collections
 import datetime
 from http.server import HTTPServer, SimpleHTTPRequestHandler
-import pprint
 import sys
 
 import configargparse
@@ -17,19 +16,19 @@ def create_parser ():
 
     parser = configargparse.ArgParser(default_config_files=default_config_files, description='Runs a website for wine shop.')
     parser.add_argument('-c', '--config', is_config_file=True, help='Config file path')
-    parser.add_argument('-w', '--wines_excel_file', type=str, default='', help='Path of Excel file with wines')
-    parser.add_argument('-a', '--actions_excel_file', type=str, default='', help='Path of Excel file with advertising actions')
+    parser.add_argument('-w', '--wines_excel_filepath', type=str, default='', help='Path of Excel file with wines')
+    parser.add_argument('-a', '--actions_excel_filepath', type=str, default='', help='Path of Excel file with advertising actions')
     return parser
 
-def create_html_file(template, wines_excel_file, actions_excel_file):
+def create_html_file(template, wines_excel_filepath, actions_excel_filepath):
     years_count = datetime.datetime.now().year - COMPANY_FOUNDATION_YEAR
-    div_hero_2_subtitle_text = f'Уже {years_count} {get_word_for_year(years_count)} с вами'
+    subtitle_text = f'Уже {years_count} {get_word_for_year(years_count)} с вами'
     
-    wine_categories = get_wine_categories(wines_excel_file)
-    actions_and_images = get_actions_and_images(actions_excel_file)
+    wine_categories = get_wine_categories(wines_excel_filepath)
+    actions_and_images = get_actions_and_images(actions_excel_filepath)
 
     rendered_page = template.render(
-            div_hero_2_subtitle_text = div_hero_2_subtitle_text,
+            subtitle_text = subtitle_text,
             wine_categories = wine_categories,
             actions_and_images = actions_and_images,
     )
@@ -74,15 +73,13 @@ def get_word_for_year(years_count: int):
     words = {'0': 'лет', '1': 'год', '2': 'года', '3': 'года', '4': 'года', '5': 'лет', '6': 'лет', '7': 'лет', '8': 'лет', '9': 'лет'}
     return words[years_count_string[-1]]
 
-def main(wines_excel_file, actions_excel_file):
+def main():
+    options = create_parser().parse_args()
     template = get_template()
-    create_html_file(template, wines_excel_file, actions_excel_file)
+    create_html_file(template, options.wines_excel_filepath, options.actions_excel_filepath)
 
     server = HTTPServer(('0.0.0.0', 8000), SimpleHTTPRequestHandler)
     server.serve_forever()
 
 if __name__ == '__main__':
-    parser = create_parser()
-    options = parser.parse_args()
-
-    main(options.wines_excel_file, options.actions_excel_file)
+    main()
